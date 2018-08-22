@@ -2,12 +2,12 @@
 
 <%= form_tag posts_path do%>
   <label for="post_title">Post title:</label>
-  <input type="text" id="post_title" name="post[title]" ><br>
+  <%=text_area_tag :'post[title]'%><br>
 
   <label for="post_description">Post description:</label>
-  <input type="text" id="post_description" name="post[description]" ><br>
+  <%= text_area_tag :'post[description]' %><br>
 
-  <input type="submit" value="Submit Post">
+  <%= submit_tag "Submit Post" %>
 <%end%>
 
 <%= params.inspect %>
